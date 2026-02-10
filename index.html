@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IRYEONG KIM | PORTFOLIO</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="nav-links">
+                <a href="about.html">ABOUT</a>
+                <a href="portfolio.html">PORTFOLIO</a>
+                <a href="gallery.html">GALLERY</a>
+                <a href="contact.html">CONTACT</a>
+            </div>
+            <div class="site-title">IRYEONG KIM</div>
+        </header>
+
+        <!-- 메인 섹션 -->
+        <section class="main-section">
+            <div class="main-text-overlay">
+                <h2>WELCOME</h2>
+                <p class="main-disclaimer">
+                    홈페이지 내 모든 컨텐츠는 상업적 목적이 아닌 개인 포트폴리오용으로 제작되었음을 밝힙니다.
+                </p>
+            </div>
+            <div class="main-image-container">
+                <div class="main-image-slider" id="mainImageSlider">
+                    <div class="main-image-slide active">
+                        <img src="image/homemain.gif" alt="Main GIF 1" width="100%">
+                    </div>
+                    <!-- <div class="main-image-slide">
+                        <img src="image/main.gif" alt="Main GIF 2">
+                    </div>
+                    <div class="main-image-slide">
+                        <img src="image/main.gif" alt="Main GIF 3">
+                    </div>
+                    <div class="main-image-slide">
+                        <img src="image/main.gif" alt="Main GIF 4">
+                    </div>
+                </div>
+                <div class="main-image-indicators">
+                    <span class="main-indicator active" data-slide="0"></span>
+                    <span class="main-indicator" data-slide="1"></span>
+                    <span class="main-indicator" data-slide="2"></span>
+                    <span class="main-indicator" data-slide="3"></span>
+                </div>
+            </div> -->
+        </section>
+    </div>
+    <footer>
+        <div class="container">
+            <p>© Iryeong Kim. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // 메인이미지 자동 슬라이드 기능
+        const mainSlider = document.getElementById('mainImageSlider');
+        const mainSlides = mainSlider.querySelectorAll('.main-image-slide');
+        const mainIndicators = document.querySelectorAll('.main-indicator');
+        let currentMainSlide = 0;
+        const slideInterval = 4000; // 4초마다 변경
+
+        function showMainSlide(index) {
+            // 모든 슬라이드 숨기기
+            mainSlides.forEach(slide => slide.classList.remove('active'));
+            mainIndicators.forEach(indicator => indicator.classList.remove('active'));
+            
+            // 현재 슬라이드 표시
+            mainSlides[index].classList.add('active');
+            mainIndicators[index].classList.add('active');
+        }
+
+        function nextMainSlide() {
+            currentMainSlide = (currentMainSlide + 1) % mainSlides.length;
+            showMainSlide(currentMainSlide);
+        }
+
+        // 자동 슬라이드 시작
+        let autoMainSlide = setInterval(nextMainSlide, slideInterval);
+
+        // 인디케이터 클릭 이벤트
+        mainIndicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                currentMainSlide = index;
+                showMainSlide(currentMainSlide);
+                // 자동 슬라이드 재시작
+                clearInterval(autoMainSlide);
+                autoMainSlide = setInterval(nextMainSlide, slideInterval);
+            });
+        });
+
+        // 마우스 호버 시 자동 슬라이드 일시정지
+        const mainSection = document.querySelector('.main-section');
+        mainSection.addEventListener('mouseenter', () => {
+            clearInterval(autoMainSlide);
+        });
+        mainSection.addEventListener('mouseleave', () => {
+            autoMainSlide = setInterval(nextMainSlide, slideInterval);
+        });
+    </script>
+</body>
+</html>

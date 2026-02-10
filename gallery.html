@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GALLERY | IRYEONG KIM</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="nav-links">
+                <a href="about.html">ABOUT</a>
+                <a href="portfolio.html">PORTFOLIO</a>
+                <a href="gallery.html" class="active">GALLERY</a>
+                <a href="contact.html">CONTACT</a>
+            </div>
+            <div class="site-title"><a href="index.html">IRYEONG KIM</a></div>
+        </header>
+        <main class="contents">
+         <section class="gallery-section">
+            <h1>GALLERY</h1>
+            <p class="section-subtitle">작품 갤러리</p>
+            <div class="gallery-grid">
+                <!-- 첫 번째 줄: 4개 이미지 -->
+                <div class="gallery-item">
+                                <a href="image/finalintroduce.mp4" target="_blank">
+                                <img src="image/video1_thum.png" alt="비디오" class="default-img">
+                                <div class="caption">
+                                    <span class="cp_title">introduce</span>
+                                    <p>self-introduce</p>
+                                    <p>사용 프로그램 : After Effects</p>
+                                    <p>기여도 : 개인100%</p>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="gallery-item">
+                        
+                            <a href="image/instacardnews.mp4" target="_blank">
+                                <img src="image/video2_thum.png" alt="비디오">
+                                <div class="caption">
+                                    <span class="cp_title">introduce</span>
+                                    <p>Instagram card news</p>
+                                    <p>사용 프로그램 : Photoshop, Illustrator</p>
+                                    <p>기여도 : 개인100%</p>
+                                </div>
+                            </a>
+                        
+                </div>
+                <div class="gallery-item" >
+                        
+                            <a href="image/netflix.mp4" target="_blank">
+                                <img src="image/video3_thumb.jpg" alt="비디오">
+                                <div class="caption">
+                                    <span class="cp_title">introduce</span>
+                                    <p>Netflix logo</p>
+                                    <p>사용 프로그램 : After Effects</p>
+                                    <p>기여도 : 개인100%</p>
+                                </div>
+                            </a>
+                     
+                </div>
+                 <div class="gallery-item" >
+                        
+                            <a href="image/movierecommend.mp4" target="_blank">
+                                <img src="image/video4_thumb.png" alt="비디오">
+                                <div class="caption">
+                                    <span class="cp_title">introduce</span>
+                                    <p>Movie recommend UX design</p>
+                                    <p>사용 프로그램 : Figma</p>
+                                    <p>기여도 : 개인100%</p>
+                                </div>
+                            </a>
+                      
+                </div>
+                
+                <!-- 두 번째 줄: 이미지 -->
+                <div class="gallery-item w-2">
+                       <a href="image/videoedit.mp4" target="_blank">
+                            <img src="image/videoedithumbnail.jpg" alt="비디오" style="width: 100%; aspect-ratio: 1920 / 1080; object-fit: cover;">
+                               <div class="caption">
+                                 <span class="cp_title">introduce</span>
+                                 <p>Video editing & thumbnail creation</p>
+                                 <p>사용 프로그램 : Premiere Pro, Photoshop, Illustrator</p>
+                                 <p>기여도 : 개인100%</p>
+                               </div>
+                      </a>
+                </div>
+                 <div class="gallery-item w-2">
+                       <a href="image/untouched.mp4" target="_blank">
+                            <img src="image/publicadthumbnail.png" alt="비디오" style="width: 100%; aspect-ratio: 1920 / 1080; object-fit: cover;">
+                               <div class="caption">
+                                 <span class="cp_title">introduce</span>
+                                 <p>Public Service Announcement (PSA)</p>
+                                 <p>UNTOUCHED: 무관심 속에서 멈춘 사회적 연결과, 관심이 만드는 재연결</p>
+                                 <p>사용 프로그램 : After Effects, Premiere Pro, Photoshop, Illustrator</p>
+                                 <p>기여도 : 개인100%</p>
+                                 <p>※ 본 영상은 AI 기술을 활용해 제작되었습니다.</p>
+                               </div>
+                      </a>
+                </div>
+                
+            </div>
+        </section>
+    </main>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>© Iryeong Kim. All rights reserved.</p>
+        </div>
+    </footer>
+    <div id="videoModal" class="modal">
+    <span class="close-btn">&times;</span>
+    <div class="modal-content">
+        <video id="modalVideo" controls autoplay>
+            <source src="" type="video/mp4">
+            브라우저가 비디오를 지원하지 않습니다.
+        </video>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
+
+

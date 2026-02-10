@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PORTFOLIO | IRYEONG KIM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <div class="nav-links">
+                <a href="about.html">ABOUT</a>
+                <a href="portfolio.html" class="active">PORTFOLIO</a>
+                <a href="gallery.html">GALLERY</a>
+                <a href="contact.html">CONTACT</a>
+            </div>
+            <div class="site-title"><a href="index.html">IRYEONG KIM</a></div>
+        </header>
+
+       <section class="portfolio-section">
+    <h1 id="sectionTitle">WORK</h1> 
+    <p class="section-subtitle">버튼을 클릭하여 포트폴리오를 확인하세요</p>
+</section>
+    
+
+    <div class="portfolio-scroll-container" id="scrollContainer">
+        <div class="portfolio-scroll-wrapper" id="scrollWrapper">
+            
+            <div class="portfolio-item">
+                <div class="portfolio-content">
+                    <div class="portfolio-hero">
+                        <div class="portfolio-poster">
+                            <img src="image/loghouseposter.png" alt="청춘로그 포스터">
+                        </div>
+                        <div class="portfolio-info">
+                            <h2>청춘로그</h2>
+                            <p class="portfolio-info-subtitle">가상의 프로그램을 제작했습니다.</p>
+                            <h3>프로그램 소개</h3>
+                            <p>막연한 내일을 준비하는 취준생들의 기록(Log)과 일상을 담아낸 공감 힐링 리얼리티 프로그램입니다.</p>
+                            <h3>개요</h3>
+                            <p>기획부터 로고 디자인, 트레일러 제작까지 전 과정을 직접 수행하며 통합적인 연출 감각과 실무 역량을 담았습니다.</p>
+                        </div>
+                    </div>
+                    <div class="portfolio-video-box">
+                        <video src="image/loghousepromotionvideofinal.mp4" controls></video>
+                    </div>
+                    <div class="vytz-thumbnail-wrapper" id="logGalleryTrigger" title="클릭하여 상세보기 (3장)">
+                        <img src="image/pagethumbnail.png" alt="청춘로그 이미지 보기">
+                        <div class="hover-overlay">클릭하여 상세보기 (3장)</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-item">
+                <div class="portfolio-content">
+                    <div class="video-dual-flex">
+                        <div class="video-box"><video src="image/vytzinsta.mp4" controls></video></div>
+                        <div class="video-box"><video src="image/Vytz_motion.mp4" controls></video></div>
+                    </div>
+                    <div class="vytz-thumbnail-wrapper" id="vytzGalleryTrigger" title="클릭하여 상세보기 (5장)">
+                        <img src="image/pagethumbnail.png" alt="Vytz 이미지 보기">
+                        <div class="hover-overlay">클릭하여 상세보기 (5장)</div>
+                    </div>
+                    <div class="image-container image-view-item" data-src="image/Vytz p.1.gif">
+                        <img src="image/Vytz p.1.gif" alt="Vytz PDP">
+                    </div>
+                </div>
+            </div>
+
+            <div class="portfolio-item">
+                <div class="portfolio-content">
+                    <h2>새로운 프로젝트 제목</h2>
+                    <p>프로젝트 설명</p>
+                </div>
+            </div>
+
+            <div class="portfolio-item">
+                <div class="portfolio-content">
+                    <h2>새로운 프로젝트 제목</h2>
+                    <p>프로젝트 설명</p>
+                </div>
+            </div>
+
+        </div> </div> <div class="nav-buttons">
+        <button class="nav-btn" id="prevBtn">← 이전</button>
+        <button class="nav-btn" id="nextBtn">다음 →</button>
+    </div>
+
+    <div class="page-indicator">
+        <div class="page-dot active" data-index="0"></div>
+        <div class="page-dot" data-index="1"></div>
+        <div class="page-dot" data-index="2"></div>
+        <div class="page-dot" data-index="3"></div>
+    </div>
+
+    <div class="scroll-indicator">
+        <span id="currentPage">1</span> / 4
+    </div>
+</section>
+    
+    <footer>
+        <div class="container">
+            <p>© Iryeong Kim. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- 단일 이미지 상세보기 모달 (GIF 등) -->
+    <div id="imageModal" class="modal">
+        <span class="close-btn image-modal-close">&times;</span>
+        <div class="modal-content modal-content--image">
+            <img id="modalImage" src="" alt="상세보기">
+        </div>
+    </div>
+
+    <!-- Vytz 5장 상세보기 전용 모달 -->
+    <div id="vytzModal" class="vytz-modal">
+        <span class="vytz-close" onclick="closeVytzModal()">&times;</span>
+        <div class="vytz-modal-content">
+            <img src="image/Vytz p.1.png" alt="detail 1">
+            <img src="image/Vytz p.2.png" alt="detail 2">
+            <img src="image/Vytz p.3.png" alt="detail 3">
+            <img src="image/Vytz p.4.png" alt="detail 4">
+            <img src="image/Vytz p.5.png" alt="detail 5">
+        </div>
+    </div>
+
+    <!-- 청춘로그 3장 상세보기 전용 모달 -->
+    <div id="logModal" class="vytz-modal">
+        <span class="vytz-close" onclick="closeLogModal()">&times;</span>
+        <div class="vytz-modal-content">
+            <img src="image/log p.1.png" alt="청춘로그 1">
+            <img src="image/log p.2.png" alt="청춘로그 2">
+            <img src="image/log p.3.png" alt="청춘로그 3">
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
